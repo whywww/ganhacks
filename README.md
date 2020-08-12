@@ -51,7 +51,7 @@ In practice, works well:
 - the stability of the GAN game suffers if you have sparse gradients
 - LeakyReLU = good (in both G and D)
 - For Downsampling, use: Average Pooling, Conv2d + stride
-- For Upsampling, use: PixelShuffle, ConvTranspose2d + stride
+- For Upsampling, use: PixelShuffle, ConvTranspose2d + stride, resize + Conv2d (to avoid checkerboard artifacts)
   - PixelShuffle: https://arxiv.org/abs/1609.05158
 
 ## 6: Use Soft and Noisy Labels
